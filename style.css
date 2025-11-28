@@ -1,0 +1,38 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#f59e0b;
+  --muted:#9aa4b2;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  margin:0;min-height:100vh;background:linear-gradient(180deg,#071029 0%, #081428 100%);color:#e6eef8;padding:24px;
+}
+header{margin-bottom:18px}
+h1{margin:0;font-size:1.6rem}
+#match-meta{color:var(--muted);margin-top:6px}
+main{max-width:900px;margin:18px auto;background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+.scoreboard{display:flex;align-items:center;justify-content:space-between;padding:18px;background:var(--glass);border-radius:8px}
+.team{flex:1;text-align:center}
+.team h2{margin:0;font-size:1.1rem}
+.score{font-size:2.6rem;font-weight:700;margin-top:8px}
+.vs{flex:0 0 60px;text-align:center;color:var(--muted)}
+.controls{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;align-items:flex-start}
+#update-form{flex:1;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#update-form label{display:flex;flex-direction:column;font-size:0.85rem;color:var(--muted)}
+#update-form input,#update-form select{padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;min-width:120px}
+#update-form button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#06121a;font-weight:600}
+.match-actions{display:flex;flex-direction:column;gap:8px}
+.match-actions button{padding:8px;border-radius:8px;border:0;background:#1f2937;color:var(--muted)}
+.events{margin-top:16px}
+.events h3{margin:0 0 8px 0}
+#events-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.event{padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;justify-content:space-between;align-items:center}
+.event .left{display:flex;gap:12px;align-items:center}
+.label{padding:4px 8px;border-radius:6px;background:rgba(0,0,0,0.3);font-size:0.8rem}
+.small{color:var(--muted);font-size:0.85rem}
+footer{max-width:900px;margin:12px auto;color:var(--muted);text-align:center}
+
+@media(max-width:640px){.scoreboard{flex-direction:column}.vs{display:none}}
