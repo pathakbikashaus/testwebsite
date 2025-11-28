@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Football Match Updates</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Football Match Live Updates</h1>
+    <p id="match-meta">Friendly — <span id="match-time">00:00</span></p>
+  </header>
+
+  <main>
+    <section class="scoreboard">
+      <div class="team">
+        <h2 id="home-team">Home</h2>
+        <div class="score" id="home-score">0</div>
+      </div>
+      <div class="vs">vs</div>
+      <div class="team">
+        <h2 id="away-team">Away</h2>
+        <div class="score" id="away-score">0</div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <form id="update-form">
+        <label>
+          Event type
+          <select id="event-type">
+            <option value="goal">Goal</option>
+            <option value="yellow">Yellow card</option>
+            <option value="red">Red card</option>
+            <option value="sub">Substitution</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label>
+          Team
+          <select id="event-team">
+            <option value="home">Home</option>
+            <option value="away">Away</option>
+          </select>
+        </label>
+
+        <label>
+          Player / Description
+          <input id="event-player" type="text" placeholder="Player name or short description" required />
+        </label>
+
+        <label>
+          Minute
+          <input id="event-minute" type="text" placeholder="e.g. 45+2" />
+        </label>
+
+        <button type="submit">Add update</button>
+      </form>
+
+      <div class="match-actions">
+        <button id="reset-btn" type="button">Reset match</button>
+        <button id="swap-btn" type="button">Swap teams</button>
+      </div>
+    </section>
+
+    <section class="events">
+      <h3>Match Events</h3>
+      <ul id="events-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>Static demo — updates stored in your browser.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
